@@ -1,0 +1,130 @@
+/**
+ * Copyright (C) 2018 by Paul Lewis
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "DIN Condensed", Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal {
+  width: 320px;
+  height: 180px;
+  border-radius: 3px;
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0, 0, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.reveal::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: #000;
+  box-shadow: 0 0 12px 6px #000;
+  transition: transform 0.4s cubic-bezier(0, 0, 0.3, 1),
+      opacity 0.4s cubic-bezier(0, 0, 0.3, 1);
+  opacity: 0.4;
+}
+
+.reveal img {
+  position: relative;
+  border-radius: 4px;
+}
+
+.reveal:hover {
+  transform: scale(1);
+}
+
+.reveal:hover::before {
+  transform: translateY(12px);
+  opacity: 0.2;
+}
+
+.reveal-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+.reveal__title,
+.reveal__title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  color: #FFF;
+  font-weight: bold;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal__title-overlay {
+  overflow: hidden;
+  top: calc(50% - 50px);
+  background: rgb(32, 6, 6);
+  height: 100px;
+  width: 405px;
+  left: 50%;
+  z-index: 2;
+  color: #FFF;
+  font-size: 50px;
+  transition: transform 0.4s cubic-bezier(0, 0, 0.3, 1);
+  transform: translateX(-150%) skew(-30deg);
+}
+
+.reveal__title-overlay-text {
+  width: 100%;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0, 0, 0.3, 1);
+  transform: translateX(100%) skew(30deg);
+}
+
+.reveal:hover .reveal__title-overlay {
+  transform: translateX(-50%) skew(-30deg);
+}
+
+.reveal:hover .reveal__title-overlay-text {
+  transform: skew(30deg);
+}

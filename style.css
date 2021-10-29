@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* navigation starts */
+header{
+    height: 30vh;
+    background-color: rgba(0,0,0, 1);
+   
+ }
+
+
+ hr{
+    position: relative;
+    left:5%;
+    top:2vh;
+}
+.upper{
+    height: 10vh;
+   position: relative;
+   padding: 0px 0px 0px 20px;
+   width:90%;
+   top: 4vh;
+   /* border: red solid 2px; */
+   left:5%;
+   display:flex;
+   align-items: center;
+}
+
+.lower{
+    height: 10vh;
+   position: relative;
+   width:90%;
+   /* border: red solid 2px; */
+   left:5%;
+   top:4vh;
+   display:flex;
+   color: white;
+}
+.compname{
+    /* border: red solid 2px; */
+    position: relative;
+    left:0.5vw;
+    top:1.5vh;
+}
+
+
+.upper p{
+    color:#fff;
+    padding-top: 0.5vh;
+    font-size: large;
+}
+
+#acc{
+    /* align-self: flex-end; */
+    background-color:  #fff;
+    border-radius: 40px;
+    height:30px;
+    width: 30px;
+    position: absolute ;
+    right:14vw;
+}
+#account{
+    position: absolute;
+    right:7vw;
+    /* padding-top: 0.5vh; */
+    font-size: x-large;
+}
+#cart{
+    position: absolute;
+    right:2vw;
+    /* padding-top: 1vh;  */
+
+    height:35px;
+    width: 35px;
+
+}
+#number{
+    position: absolute;
+    left: 13vw;
+}
+ul{
+    position: relative;
+    display: flex;
+    left: 45vw;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-right:1vw ;
+    font-family: 'Rubik', sans-serif;
+}
+ul li img{
+    height: 25px;
+    width: 25px;}
+ul li a{
+    color: white;
+}
+
+/* navigation ends */
+
+#chatbox
+{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    height: 70px;
+    width: 70px;
+    z-index: 1;
+}
+
+/*  */
+/* check us out starts */
+.checkUsOut
+{
+    height: 110vh;
+    /* border: 2px solid red; */
+    background-image: url("1568231.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.check
+{
+    /* border: 2px solid red; */
+    position:absolute;
+    display: flex;
+    /* z-index: 2; */
+    right: 0px;
+    height:110vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0,0.3);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    font-family: 'Noto Serif Display', serif;
+}
+
+
+
+.check p
+{
+    font-size: 1in;
+    
+}
+
+/* save more glow effect starts */
+.btn{
+   
+    border-radius: 30px;
+    position: absolute;
+    top: 73vh;
+    /* border: tomato solid 2px; */
+    width: 155px;
+    height: 50px;
+}
+.btn a{
+    background: rgba(255, 255, 255, 0.05);
+    /* box-shadow: 0px 15px 35px rgba(155, 76, 76, 0.8); */
+    border-top: 1px solid rgba(180, 31, 31, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.btn:hover a{
+    letter-spacing: 3px;
+}
+.btn a::before{
+    content: '';
+    top:0;
+    left:0;
+    position: absolute;
+    width:50%;
+    height: 100%;
+    background: linear-gradient(to left,rgba(255,255,255,0.15),transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+.btn:hover a::before{
+    transform: skewX(45deg) translateX(200%);
+}
+.btn::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #2bd2ff;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+    box-shadow: 0 0 5px  #2bd2ff,0 0 15px #2bd2ff,0 0 30px #2bd2ff,0 0 60px #2bd2ff;
+}
+.btn::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #2bd2ff;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+    box-shadow: 0 0 5px  #2bd2ff,0 0 15px #2bd2ff,0 0 30px #2bd2ff,0 0 60px #2bd2ff;
+}
+.btn:hover::before
+{
+    bottom: 0;
+    height:50%;
+    width: 100%;
+    border-radius: 30px;
+    transition-delay: 0.3s;
+}
+.btn:hover::after
+{
+    top: 0;
+    height:50%;
+    width: 100%;
+    border-radius: 30px;
+    transition-delay: 0.3s;
+}
+.btn:nth-child(1)::before,
+.btn:nth-child(1)::after
+
+{
+    background: #2bd2ff;
+    box-shadow: 0 0 5px  #2bd2ff,0 0 15px #2bd2ff,0 0 30px #2bd2ff,0 0 60px #2bd2ff;
+}
+/* save more glow effect ends */
+
+
+
+
+
+/* watch gallery starts */
+.deals
+{
+    background: #000;
+    height: 140vh;
+}
+
+.container
+{
+    
+    display: flex;
+    width: 100%;
+    height: 55vh;
+    /* border: 2px solid red; */
+    /* padding: 15px 20px 0px 20px; */
+    /* padding-top: 15px; */
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.card
+    {
+        height: 50vh;
+        margin: 15px 15px 5px 15px;
+        width: 20vw;
+        /* border: 1px solid rgb(211, 21, 21); */
+        cursor: pointer; 
+        transition: 2s;
+        /* background-color: #fff; */
+    }
+    
+    
+    .front
+    {
+        position: absolute;
+        transition: 0.2s;
+        width: 10vw;
+        /* border: green 2px solid; */
+        overflow: hidden;
+    }
+    
+    .back
+    {
+        /* display: none; */
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        opacity: 0;
+        position:relative;
+        top: 60%;
+        background:rgba(219, 218, 218, 0.8);
+        transition: 1s;
+        z-index: 1;
+    }
+    #upper
+    {
+        height: 80%;
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #lower
+    {
+        color: white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 5px;
+        font-size:large;
+        background-color: black;
+        height: 8vh;
+        z-index: 3;
+    }
+    
+    .card:hover .back
+    {
+        top: 40%;
+        opacity: 1;
+        
+    }
+
+    #front1{
+        display: block;
+    }
+    #front2{
+        display: none;
+        /* transform: scale(1.4); */
+    }
+    
+    .card:hover #front1
+    {
+       display: none;
+    }
+    .card:hover #front2
+    {
+       display: block;
+    }
+    .card:hover{
+        box-shadow: 5px 5px 5px 5px rgb(211, 211, 211);
+    }
+    
+    
+   
+    
+    .card:hover #upper .quickView
+    {
+        height: 20px;
+    }
+    .card:hover #lower{
+        letter-spacing: 0.09vw;
+    }
+/* watch gallery ends */
+
+
+/* our origin starts */
+.origin
+{
+    position: absolute;
+    left:20vw;
+    width: 60vw;
+    color: #fff;
+    margin-top: 20vh;
+    text-align: center;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.origin p 
+{
+    line-height: 40px;
+    font-size: large;
+}
+.origin h1
+{
+    font-size: 60px;
+}
+
+/* our origin ends */
+
+/* slideshow starts */
+.slides
+{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    animation: reel 21s steps(7,end) infinite ;
+    
+}
+
+.watch
+{
+    
+    /* width: 100%; */
+    height: 100vh;
+    /* border: 1px solid green; */
+    
+}
+
+
+
+
+@keyframes reel
+{
+    from{right:0vw}
+    to{right: 700vw}
+}
+.img
+{
+    
+    width:100vw;
+    height: 100%;
+
+}
+
+.slider
+{
+    overflow:hidden;
+    width: 100%;
+    height: 80vh;
+    /* border: 2px solid red; */
+    z-index: -1;
+}
+/* slideshow  ends */
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background: #000;
+    height: 20vh;
+    color: rgb(255, 255, 255);
+    line-height: 35px ;
+}   
+
+   
